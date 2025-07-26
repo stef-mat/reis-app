@@ -1,0 +1,232 @@
+[
+  {
+    "categorie": "Leuke Horeca",
+    "naam": "IJssalon De Schepper, Julianadorp",
+    "adres": "Schoolweg 5 (Winkelcentrum De Riepel), 1787 AV Julianadorp",
+    "gps_coordinaten": "52.9056°N, 4.7250°E",
+    "beschrijving": "Een ambachtelijke ijssalon, bekroond als een van de beste ijssalons van Nederland. Dagelijks wordt vers ijs geproduceerd in de open ijskeuken met verse ingrediënten. Biedt lactosevrij sorbetijs en vrijwel alle smaken zijn glutenvrij. Geniet van 24 smaken vers bereid ijs, koffie, of ontspan op het terras met uitzicht op een klein speeltuintje.",
+    "prijsindicatie": "Bolletje €1,50-2,00, kindercoupes €3,50-5,50, grote coupes €6,50-8,50",
+    "openingstijden": "Zomervakantie: Ma t/m vr 10:00-22:00 uur (bij mooi weer eerder/langer open). Ma 12:30-21:00, di-zo 11:00-21:00 uur (algemeen).",
+    "website": "www.ijssalondeschepper.nl"
+  },
+  {
+    "categorie": "Leuke Horeca",
+    "naam": "Strandpaviljoen Zee van Tijd, Julianadorp aan Zee",
+    "adres": "Zanddijk 30, 1787 PP Julianadorp aan Zee (Strandopgang Zandloper, Paal 5)",
+    "gps_coordinaten": "52.8933, 4.7177",
+    "beschrijving": "Een gezellig familiepaviljoen direct aan het strand van Julianadorp aan Zee, ideaal voor lunch, diner of een borrelplank. Geniet van het prachtige uitzicht op zee en de zonsondergang. Het strand zelf fungeert als ultieme speelplek voor kinderen, waardoor ouders ontspannen kunnen tafelen in een moderne, ongedwongen sfeer.",
+    "prijsindicatie": "Hoofdgerechten ca. €17-€30, Kindermenu's ca. €7,50-€12,50, Pannenkoeken ~€6",
+    "openingstijden": "T/m half oktober 7 dagen per week open vanaf 10:00 uur (daarna aangepaste wintertijden). April-september dagelijks 10:00-22:00 uur.",
+    "website": "www.zeevantijd.com"
+  },
+  {
+    "categorie": "Leuke Horeca",
+    "naam": "De Pannenkoekenvallei, Den Helder",
+    "adres": "De Helderse Vallei 7, 1783 DA Den Helder",
+    "gps_coordinaten": "52.9358468, 4.7345038",
+    "beschrijving": "Een pannenkoekenrestaurant gelegen in het recreatiegebied De Helderse Vallei, met pannenkoeken bereid met gezonde, biologische ingrediënten. Zeer kindvriendelijk met een buitenspeeltuin, zandbak en indoor speelkamer. Ideaal te combineren met buitenactiviteiten in de Helderse Vallei. Specialiteit: IJspannenkoeken en 'Valleitjes' muntjes voor kinderen.",
+    "prijsindicatie": "Pannenkoeken ca. €6,95-€19,95, kindermenu €4,95, poffertjes €5,95, hoofdgerechten €16-24",
+    "openingstijden": "Wo t/m zo 12:00-20:00/21:00 uur (ma en di gesloten)",
+    "website": "www.pannenkoekenvallei.nl"
+  },
+  {
+    "categorie": "Leuke Horeca",
+    "naam": "De Holle Bolle Boom (Subtropisch Zwembad & Speelparadijs)",
+    "adres": "Bongerdlaan 3, 1741 MD Tuitjenhorn",
+    "gps_coordinaten": "52.7619°N, 4.8344°E",
+    "beschrijving": "De ultieme gezinsbestemming met een indoor speelparadijs (200m²), het subtropische zwembad \"Holle Bolle Plons\" en een grote buitenspeeltuin. Dit complex herbergt twee restaurants (Het Klokhuis en Pannenkoekenhuis Wafelien). Er is een minigaard voor peuters en een freefall-glijbaan voor ouderen, waardoor het een ideale overdekte optie is bij slecht weer.",
+    "prijsindicatie": "Kindermenu €8-12, volwassen maaltijden €14-22, entree spelen €8,75-15,50",
+    "openingstijden": "September-maart dagelijks; restaurants Het Klokhuis 9:30-20:00 uur",
+    "website": "www.hollebolleboom.nl"
+  },
+  {
+    "categorie": "Leuke Horeca",
+    "naam": "Lunchcafé Deugeniet",
+    "adres": "Beatrixstraat 36, 1781 EJ Den Helder",
+    "gps_coordinaten": "52.9565, 4.7597",
+    "beschrijving": "Een knus stadscafé in het centrum van Den Helder, bekend om zijn sociale concept en kindvriendelijkheid. Het menu omvat verse broodjes, tosti's, pannenkoekjes en huisgemaakt gebak. Er zijn twee aparte speelhoekjes vol speelgoed, kinderboeken en kleurspullen, waardoor ouders rustig kunnen koffiedrinken terwijl de kinderen spelen.",
+    "prijsindicatie": "Broodjes €5–€8, kindermenu ±€4",
+    "openingstijden": "Di–Za 09:30–17:00 uur (zo/ma gesloten)",
+    "website": "deugeniet-denhelder.nl"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "Restaurant Kruimeltje, Julianadorp",
+    "adres": "Meester Tigchelaarstraat 6, 1787 BB Julianadorp",
+    "gps_coordinaten": "52.8872, 4.7492",
+    "beschrijving": "Een gezellig familierestaurant met een huiselijke sfeer en een grote buitenspeeltuin direct naast het terras. Het biedt smakelijke en betaalbare maaltijden, van saté tot pasta's, en een speciaal kindermenu. Kinderen vermaken zich uitstekend in de speeltuin, terwijl volwassenen rustig natafelen. Binnen is er ook ruimte om te kleuren.",
+    "prijsindicatie": "Kindermenu's ca. €6,50-€12,50, Pannenkoeken ca. €10,25-€14,25, Hoofdgerechten volw. ca. €15,95-€21,95",
+    "openingstijden": "Di & do t/m zo vanaf 17:00 uur (ma & wo gesloten, m.u.v. feestdagen). Do t/m di vanaf 16:00 uur.",
+    "website": "www.restaurantkruimeltje.nl"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "Restaurant Honky Tonk, Schoorl",
+    "adres": "Duinvoetweg 11, 1871 EA Schoorl",
+    "gps_coordinaten": "Niet expliciet vermeld",
+    "beschrijving": "Gelegen aan het bekende Schoorlse klimduin, biedt dit restaurant een gezellige eetervaring met een uitgebreide lunch- en dinerkaart, inclusief broodjes, soepen, salades en pannenkoeken. Er zijn speciale kindermenu's. Geniet op het verwarmde terras met uitzicht op het klimduin, dat als een grote natuurlijke speeltuin fungeert voor kinderen.",
+    "prijsindicatie": "Kindermenu's beschikbaar, Hoofdgerechten volw. ca. €19,50-€28,50",
+    "openingstijden": "Di, wo, vr 10:30-22:00 uur. Do 16:00-22:00 uur. Za, zo 09:30-22:00 uur. Ma gesloten. Keuken sluit om 20:30 uur.",
+    "website": "www.honkytonk.nl"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "De Holle Bolle Boom - Restaurant Het Klokhuis",
+    "adres": "Bongerdlaan 3, 1747 CA Tuitjenhorn",
+    "gps_coordinaten": "52.7542°N, 4.8089°E",
+    "beschrijving": "Het ultieme gezinsrestaurant waar kinderen na 18:00 uur gratis toegang hebben tot een grote speeltuin (200m²) en het subtropisch zwembad. Geniet van een gezellige sfeer met open haard, kinderstoelen, kleurplaten en een uitgebreid kindermenu. Ouders kunnen rustig dineren terwijl de kinderen zich vermaken.",
+    "prijsindicatie": "Hoofdgerechten €16-24, kindermenu €8-12",
+    "openingstijden": "Dagelijks vanaf 9:30 uur, keuken 11:00-21:00 uur",
+    "website": "www.hollebolleboom.nl/het-klokhuis"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "Restaurant eFFe in 't Dorp",
+    "adres": "Loopuytpark 10, 1787 AE Julianadorp",
+    "gps_coordinaten": "52.8953°N, 4.7276°E",
+    "beschrijving": "Een modern restaurant gevestigd in een historisch gebouw aan het zonnige Loopuytpark. Het biedt een eigentijdse keuken met verse ingrediënten en kindvriendelijke menuopties. De centrale ligging maakt het ideaal voor gezinnen, waar kinderen voor en na het eten kunnen spelen in het park.",
+    "prijsindicatie": "Lunch €12-18, hoofdgerechten diner €18-26, kindermenu €10-14",
+    "openingstijden": "Dagelijks vanaf 10:00 uur, lunch vanaf 11:30 uur, diner vanaf 17:00 uur",
+    "website": "www.efferestaurants.nl"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "Grand Café 1909",
+    "adres": "Centrum Julianadorp",
+    "gps_coordinaten": "52.8953°N, 4.7276°E (geschat)",
+    "beschrijving": "Een eigenwijs gezellig grand café dat uitblinkt in kindvriendelijkheid, met een automatische pannenkoeken-service voor kinderen (met siroop en poedersuiker). Geniet van de vriendelijke en snelle bediening en de ontspannen sfeer. Ideaal voor lunch, diner of gewoon een pannenkoek.",
+    "prijsindicatie": "Lunch €10-16, hoofdgerechten €16-24, kindermenu/pannenkoeken €6-10",
+    "openingstijden": "Dagelijks (exacte tijden opvragen)",
+    "website": "www.grandcafe1909.com"
+  },
+  {
+    "categorie": "Leuke Restaurants",
+    "naam": "Nogal Wiedus Eten & Drinken",
+    "adres": "Fortwachter 3, 1789 AS Huisduinen (Den Helder)",
+    "gps_coordinaten": "52.9539, 4.7189",
+    "beschrijving": "Dit prachtig gelegen restaurant bevindt zich pal achter de duinen bij Fort Kijkduin, met een panoramisch uitzicht op zee, Texel en de vuurtoren De Lange Jaap. Het menu biedt voor ieder wat wils, inclusief verse vis, steaks en een kindermenu. Hoewel er geen aparte speelkamer is, biedt de ruime opzet en het uitzicht genoeg om kinderen te boeien.",
+    "prijsindicatie": "Hoofdgerechten €18–€25; kindergerecht ~€8",
+    "openingstijden": "Wo–Zo vanaf 12:00 uur (hoogseizoen dagelijks)",
+    "website": "nogalwiedus.nl"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Koetshuysch Kaaswinkel Julianadorp",
+    "adres": "Schoolweg 37B (Winkelcentrum De Riepel), 1787 AV Julianadorp",
+    "gps_coordinaten": "52.8956°N, 4.7289°E",
+    "beschrijving": "Deze specialistische kaaswinkel, direct in Julianadorp, biedt een uitgebreid assortiment Hollandse en buitenlandse kazen, waaronder Noord-Hollandse ambachtelijke boerenkaas en diverse kruidenkazen. U kunt komen proeven en persoonlijk advies krijgen. Ook verkrijgbaar zijn verse noten en leuke cadeaupakketten met lokale delicatessen.",
+    "prijsindicatie": "Jong Gouda €8-12/kg, boerenkaas €12-16/kg, kruidenkazen €14-18/kg",
+    "openingstijden": "Ma 13:00-17:30 uur, Di-Vr 09:00-17:30 uur, Za 09:00-17:00 uur, Zo gesloten",
+    "website": "https://koetshuyschkaas.nl/"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Bakkerij Dunselman, Julianadorp",
+    "adres": "Drooghe Bol 1020, 1787 AE Julianadorp (Loopuytpark)",
+    "gps_coordinaten": "Niet expliciet vermeld",
+    "beschrijving": "Een ambachtelijke bakkerij die deel uitmaakt van een bakkersfamilie met ruim 160 jaar geschiedenis. Biedt een breed assortiment aan vers brood, gebak, koek en lokale specialiteiten. Ideaal voor verse broodjes voor het ontbijt of heerlijke lekkernijen voor onderweg, met vriendelijk personeel.",
+    "prijsindicatie": "Brood ca. €3,15-€3,99, Gebak ca. €3,10",
+    "openingstijden": "Ma t/m za 08:00-17:30 uur (za tot 16:30 uur), Zo gesloten",
+    "website": "www.bakkerijdunselman.nl"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Bakkerij Dunselman, Den Helder",
+    "adres": "Keizerstraat 94, 1781 GE Den Helder",
+    "gps_coordinaten": "52.9585, 4.7594",
+    "beschrijving": "De historische hoofdbakkerij, al 160 jaar een begrip, bekend om ambachtelijke brood- en banketproducten. Proef unieke Helderse specialiteiten zoals de Helderse Jodenkoek, Helderse Taai en Helderse Broeder, gebakken volgens 19e-eeuwse recepten. Het is een reis terug in de tijd, met een eigen chocolaterie en dagelijks vers brood en gebak.",
+    "prijsindicatie": "Brood ca. €3,15-€3,99, Gebak ca. €3,10",
+    "openingstijden": "Di–Vr 08:00–17:00 uur, Za 08:00–16:00 uur, Zo/ma gesloten",
+    "website": "www.bakkerijdunselman.nl"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Slagerij Jan Kater, Julianadorp",
+    "adres": "Drooghe Bol 1028, 1788 VB Julianadorp",
+    "gps_coordinaten": "Niet expliciet vermeld",
+    "beschrijving": "Een ambachtelijke slager bekend om zijn verse en kwaliteitsvolle vlees en vleeswaren. Het brede assortiment omvat Heydehoeve varkensvlees, boerderijkip, diverse specialiteiten en huisgemaakte salades. Ze kunnen ook saladeschotels op maat maken voor feesten of visite, wat gemak biedt voor kwaliteitsmaaltijden in uw vakantieverblijf.",
+    "prijsindicatie": "Niet gespecificeerd, nadruk op \"ambachtelijke kwaliteit\" en \"eerlijke prijs\"",
+    "openingstijden": "Ma t/m vr 08:00-18:00 uur, Za 08:00-17:00 uur, Zo gesloten",
+    "website": "www.slagerijkater.nl"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Kaatje's Deli Alkmaar",
+    "adres": "Ridderstraat 3, 1811 EX Alkmaar",
+    "gps_coordinaten": "52.6316°N, 4.7482°E",
+    "beschrijving": "Een hoogwaardige delicatessenwinkel met Oer-Hollandse Beemsterkaas en exclusieve producten. Hier vindt u ambachtelijke charcuterie, op maat gemaakte borrelplanken, gekoelde wijnen en speciale bieren. Ideaal voor fijnproevers die op zoek zijn naar unieke culinaire producten.",
+    "prijsindicatie": "Premium kazen €15-25/kg, charcuterie €20-35/100g, borrelplanken €25-50",
+    "openingstijden": "Reguliere winkeltijden (opvragen)",
+    "website": "https://kaatjesdeli.nl/"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Boerderijwinkel Boet32 Schagerbrug",
+    "adres": "Grote Sloot 274, 1751 LH Schagerbrug",
+    "gps_coordinaten": "52.7854°N, 4.9015°E",
+    "beschrijving": "Ervaar een echte boerderij-ervaring in deze zelfbedieningswinkel. Koop verse rauwe melk van eigen koeien, ambachtelijk boerenijs, eigen geitenkaas, Jersey zuivelproducten, lokale groenten, bakmixen en honing. Het is educatief voor kinderen en biedt authentieke streekproducten.",
+    "prijsindicatie": "Rauwe melk €1,50-2,00/l, geitenkaas €14-18/kg, boeren-ijs €3-5/bakje",
+    "openingstijden": "7 dagen 08:00-21:00 uur (vr/za 09:00-16:00 uur bemand)",
+    "website": "www.boet32.nl"
+  },
+  {
+    "categorie": "Lokale Retail",
+    "naam": "Zorgboerderij Tesselaar (zuivel & boerderijwinkel)",
+    "adres": "Badhuisstraat 53, 1789 AJ Huisduinen (bij Fort Kijkduin)",
+    "gps_coordinaten": "52.9544, 4.7195",
+    "beschrijving": "De enige melkvee- en zorgboerderij in Den Helder biedt dagverse zuivel (melk, yoghurt), ambachtelijke kazen van eigen koeien, huisgemaakte boerenworst, scharreleieren en zelfs pindakaas. Alles komt direct van het land. U kunt de koeien in de wei zien en de alpaca’s aaien. Probeer de “Nieuwedieper” kaas.",
+    "prijsindicatie": "Niet gespecificeerd",
+    "openingstijden": "Ma 15:00-18:00 uur; Wo 15:00-18:00 uur; Za 16:00-19:00 uur (di, do, vr, zo gesloten)",
+    "website": "boerderijtesselaar.nl"
+  },
+  {
+    "categorie": "Lokale Brouwerijen",
+    "naam": "Stadsbrouwerij Helderse Jongens (Fort Westoever)",
+    "adres": "Westoever 1, 1785 PB Den Helder",
+    "gps_coordinaten": "52.9703°N, 4.7644°E",
+    "beschrijving": "Gelegen in een historisch fort uit 1825, deze stadsbrouwerij brouwt \"echt Helders bier\" met namen als Napoleon Dubbelbock en Helders Goud. Er is een sfeervol proeflokaal en restaurant in de bierkelder. Geniet op het grote terras aan het water met waterspeelplek voor kinderen. Rondleidingen met proeverij zijn mogelijk in het weekend.",
+    "prijsindicatie": "Bieren €4-6, rondleiding €8 p.p. (incl. proefglas), burgers/bistro €12-18",
+    "openingstijden": "Wo t/m zo vanaf 11:00 uur (ma & di open in overleg/bij groepen); Proeflokaal: Woe-Zo 15:00-22:00 uur (rondleidingen alleen za/zo)",
+    "website": "https://fortwestoever.nl/"
+  },
+  {
+    "categorie": "Lokale Brouwerijen",
+    "naam": "Polder Brouwerij, Anna Paulowna",
+    "adres": "Niet expliciet vermeld, maar gelegen in Anna Paulowna",
+    "gps_coordinaten": "Niet expliciet vermeld",
+    "beschrijving": "Een lokale brouwerij gerund door drie vrienden met een passie voor het brouwen van \"unieke bieren uit de polder\". Ze bieden diverse smaken, waaronder Blond, Weisen, Kersen, Dunkel Weizen, NEIPA en Barley Wine. Ideaal om de lokale brouwcultuur te ontdekken en ambachtelijke bieren te proeven.",
+    "prijsindicatie": "Niet gespecificeerd",
+    "openingstijden": "Niet gespecificeerd",
+    "website": "www.polderbrouwerij.nl"
+  },
+  {
+    "categorie": "Lokale Brouwerijen",
+    "naam": "Moersleutel Craft Brewery",
+    "adres": "Diamantweg 9, 1811 MH Alkmaar",
+    "gps_coordinaten": "52.6297°N, 4.7480°E",
+    "beschrijving": "Een moderne craft brewery met een aanbod van meer dan 330 verschillende bieren, zoals de populaire Crank the Juice (New England IPA) en Motor Oil (Imperial Stout). Rondleidingen zijn mogelijk op de eerste zaterdag van de maand. Deze brouwerij is meer volwassen-gericht met beperkte kinderfaciliteiten.",
+    "prijsindicatie": "Bieren €5-8, rondleiding €25 (inclusief 3 bieren)",
+    "openingstijden": "Rondleidingen eerste zaterdag maand 14:00 uur (90 min)",
+    "website": "https://moersleutel.com/"
+  },
+  {
+    "categorie": "Lokale Brouwerijen",
+    "naam": "Alcmaersche Bierbrouwerij \"de Die\"",
+    "adres": "Alkmaar (exacte locatie niet publiek toegankelijk)",
+    "gps_coordinaten": "52.6297°N, 4.7480°E (Alkmaar centrum)",
+    "beschrijving": "Een microbrouwerij opgericht in 2015, die speciaalbieren met een Alkmaarse insteek brouwt, vernoemd naar het riviertje De Die. Er is geen eigen proeflokaal, maar proeverijen zijn op aanvraag mogelijk. De bieren zijn te koop in lokale cafés en winkels in Alkmaar.",
+    "prijsindicatie": "Prijzen op aanvraag voor proeverijen",
+    "openingstijden": "Op afspraak",
+    "website": "https://www.brouwerijdedie.nl/"
+  },
+  {
+    "categorie": "Lokale Brouwerijen",
+    "naam": "Texelse Bierbrouwerij",
+    "adres": "Schilderweg 214B, 1792 CK Oudeschild (Texel)",
+    "gps_coordinaten": "53.0391, 4.8480",
+    "beschrijving": "De bekende eilandbrouwerij van Texel, waar onder andere de beroemde Skuumkoppe (donker witbier) gebrouwen wordt. De rondleiding \"Texels Beleving\" neemt u mee door het brouwproces, gevolgd door een proeverij in het proeflokaal. De ferrytocht naar Texel is al een uitje op zich.",
+    "prijsindicatie": "Rondleiding + proeverij €15 p.p., Bieren per glas ~€3,50",
+    "openingstijden": "Proeflokaal in seizoen (apr-okt) Di-Vr 10:00-18:00 uur; Za 10:00-19:30 uur",
+    "website": "texels.nl"
+  }
+]
