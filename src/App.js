@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import LocationsPage from './pages/LocationsPage';
 import { FavoritesProvider } from './context/FavoritesContext';
 import { HiddenLocationsProvider } from './context/HiddenLocationsContext';
+import { APP_CONFIG } from './config';
 
 const App = () => {
     const [pageState, setPageState] = useState({ page: 'landing', filters: [] });

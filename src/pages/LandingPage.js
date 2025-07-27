@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import doenData from '../data/doen.json';
 import etenData from '../data/eten.json';
+import { APP_CONFIG } from '../config';
 
 const LandingPage = ({ setPageState }) => {
 
@@ -27,10 +28,10 @@ const LandingPage = ({ setPageState }) => {
                 <div className="text-center mb-16">
                     <span className="text-xl text-amber-800">Familievakantie</span>
                     <h1 className="text-6xl md:text-8xl font-extrabold text-amber-900" style={{ fontFamily: "'Comic Sans MS', 'cursive', 'sans-serif'" }}>
-                        Hallo Noord-Holland!
+                        Hallo {APP_CONFIG.region}!
                     </h1>
                     <p className="text-xl text-slate-600 mt-4 max-w-2xl mx-auto">
-                        Jullie persoonlijke gids voor de leukste avonturen in de Kop van Holland.
+                        Jullie persoonlijke gids voor de leukste avonturen rond {APP_CONFIG.city}.
                     </p>
                 </div>
 
