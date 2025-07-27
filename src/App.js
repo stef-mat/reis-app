@@ -13,7 +13,13 @@ const App = () => {
             case 'landing': 
                 return <LandingPage setPageState={setPageState} />;
             case 'locations': 
-                return <LocationsPage setPageState={setPageState} initialFilters={pageState.filters} />;
+                return (
+                    <LocationsPage 
+                        setPageState={setPageState} 
+                        initialFilters={pageState.filters}
+                        showFavorites={pageState.showFavorites}
+                    />
+                );
             default: 
                 return <LandingPage setPageState={setPageState} />;
         }

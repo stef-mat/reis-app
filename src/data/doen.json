@@ -1,7 +1,7 @@
 [
   {
     "categorie": "Bezienswaardigheden",
-    "naam": "Openluchtmuseum De Spitkeet(aanrader)",
+    "naam": "Openluchtmuseum De Spitkeet",
     "adres": "De Dunen 3, 9281 PE Harkema",
     "gps_coordinaten": "53.172 N, 6.156 E",
     "beschrijving": "Openluchtmuseum over het wonen op de Friese en Groningse heide (1850‑1950). Op een park van vier hectare staan plaggenhutten, holwoningen en woudhuisjes, er is een boomgaard, geiten en schapen en er zijn speelweides met speurtochtenmuseum.frl.",
@@ -20,7 +20,7 @@
     "beschrijving": "Groot heide‑ en veenreservaat met pingo‑ruïnes en veenmeren. Je wandelt gratis over heidevelden; de heide bloeit in augustus/septembershereypaul.com.",
     "prijsindicatie": "gratis",
     "openingstijden": "altijd toegankelijk",
-    "website": "–",
+    "website": "",
     "reistijd_auto": "±5 min",
     "reistijd_fiets": "±5 min",
     "aanraders": "Maak een korte wandeling of neem de picknickmand mee; kinderen kunnen los rennen en insecten zoeken."
@@ -40,7 +40,7 @@
   },
   {
     "categorie": "Attracties",
-    "naam": "Doolhofpark Bakkeveen (aanrader)",
+    "naam": "Doolhofpark Bakkeveen",
     "adres": "Mjûmsterwei 16, 9243 SK Bakkeveen",
     "gps_coordinaten": "53.103 N, 6.259 E",
     "beschrijving": "Labyrintenpark met drie doolhoven, speeltuin, waterspeelplaats en goud‑zeefbeekje. Toegang is gratis; consumptie verplicht bij het paviljoenfriesland.nl.",
@@ -66,7 +66,7 @@
   },
   {
     "categorie": "Attracties",
-    "naam": "Sanjes Safari (voorheen Sanjes Fertier)",
+    "naam": "Sanjes Safari",
     "adres": "De Sânjes 4, 9269 HA Feanwâlden",
     "gps_coordinaten": "53.249 N, 5.993 E",
     "beschrijving": "Combinatie van kinderpretpark en dierentuin: grote apenkooihal, goudmijn, luchtkussen, Ravensstein‑attractie, Jungle River‑boottocht en natuurmuseum. Binnen en buiten spelenwaterlandvanfriesland.nl.",
@@ -79,13 +79,13 @@
   },
   {
     "categorie": "Wandelroutes",
-    "naam": "Mandefjild gele route (4,1 km)(aanrader)",
+    "naam": "Mandefjild gele route",
     "adres": "Start: parkeerplaats Tsjerkewal, Bakkeveen",
     "gps_coordinaten": "53.100 N, 6.256 E",
     "beschrijving": "Bewegwijzerde wandelroutes door heide en bos. De gele route is ca. 4,1 km (groene route 8,2 km, rode 3 km, blauwe 1,2 km). Onderweg pingo‑ruïnes, cranberry’s en picknickbankjesbakkeveen.nlbakkeveen.nl.",
     "prijsindicatie": "gratis",
     "openingstijden": "altijd toegankelijk",
-    "website": "–",
+    "website": "",
     "reistijd_auto": "±4 min",
     "reistijd_fiets": "±6 min",
     "aanraders": "Loop met de kinderen over heidepaden, zoek libellen bij de vennetjes en houd picknick op een bankje; kinderwagenvriendelijk tot 4 km."
@@ -118,7 +118,7 @@
   },
   {
     "categorie": "Evenementen",
-    "naam": "Zomermarkt camping Ikeleane(29 jul 2025)",
+    "naam": "Zomermarkt camping Ikeleane",
     "adres": "Duerswâldmer wei 19, Bakkeveen",
     "gps_coordinaten": "53.077 N, 6.253 E",
     "beschrijving": "Gezellige zomermarkt op de camping met kramen vol kleding, speelgoed, fruit, kaas en ambachtelijke producten; vindt plaats op dinsdag 29 juli 2025 van 11:00 tot 17:00bakkeveen.nl.",
@@ -131,7 +131,7 @@
   },
   {
     "categorie": "Evenementen",
-    "naam": "Ballonvaart Bakkeveen(1 aug 2025)",
+    "naam": "Ballonvaart Bakkeveen",
     "adres": "Start vanaf Duerswâldmer Wei 11, Bakkeveen",
     "gps_coordinaten": "53.077 N, 6.254 E",
     "beschrijving": "Op vrijdag 1 augustus 2025 stijgen er luchtballonnen op vanaf Bakkeveen rond 19:00 uur. De tocht gaat over het Mandefjild en het beekdallandschapbakkeveen.nl.",
@@ -144,7 +144,7 @@
   },
   {
     "categorie": "Evenementen",
-    "naam": "Vlooienmarkt Bakkeveen(2 aug 2025)",
+    "naam": "Vlooienmarkt Bakkeveen",
     "adres": "Sportterrein Mjûmsterwei 16, Bakkeveen",
     "gps_coordinaten": "53.103 N, 6.259 E",
     "beschrijving": "Een van de grootste openluchtvlooienmarkten van Noord‑Nederland met meer dan 500 standhouders en duizenden bezoekersbakkeveen.nl. De markt begint vroeg in de ochtend en eindigt rond 13 uurbakkeveen.nl; parkeren kost €1 en er zijn 17 toilettenbakkeveen.nl.",
@@ -157,7 +157,7 @@
   },
   {
     "categorie": "Evenementen",
-    "naam": "Natuurmarkt De Kruidhof(6 aug 2025)",
+    "naam": "Natuurmarkt De Kruidhof",
     "adres": "Schoolstraat 29, 9294 KB Buitenpost",
     "gps_coordinaten": "53.257 N, 6.147 E",
     "beschrijving": "Jaarlijkse natuurmarkt met >50 kramen vol planten, zaden, streekproducten en natuurartikelen; trekt ca. 2500 bezoekers en biedt een gereduceerd toegangstarief voor de tuinendekruidhof.nl.",
@@ -293,7 +293,7 @@
     "beschrijving": "In de zomerperiode is er wekelijks een gezellige braderie in het centrum van Bakkeveen met kraampjes, muziek en vaak ook kinderattracties. Beste keuze vanwege de locatie (zeer dichtbij), de gezellige sfeer en het feit dat het een terugkerend evenement is, waardoor de kans groot is dat het in uw vakantieperiode plaatsvindt.",
     "prijsindicatie": "Gratis toegang.",
     "openingstijden": "Avonduren (ca. 18:00 - 21:00).",
-    "website": "Check bakkeveen.nl of lokale aankondigingen.",
+    "website": "Checkbakkeveen.nloflokaleaankondigingen.",
     "reistijd_auto": "2 min",
     "reistijd_fiets": "6 min",
     "aanraders": "De exacte data en tijden worden vaak kort van tevoren bekendgemaakt via lokale media of de VVV. Meestal op een vaste avond in de week (bijv. dinsdag)."
@@ -306,7 +306,7 @@
     "beschrijving": "Een markt met een focus op lokale en ambachtelijke streekproducten. Vaak zijn er ook proeverijen en soms activiteiten voor kinderen.",
     "prijsindicatie": "Gratis toegang.",
     "openingstijden": "Meestal op zaterdag (check lokale agenda).",
-    "website": "Check bakkeveen.nl of lokale aankondigingen.",
+    "website": "Checkbakkeveen.nloflokaleaankondigingen.",
     "reistijd_auto": "2 min",
     "reistijd_fiets": "6 min",
     "aanraders": "Kijk uit naar lokale kazen, worsten en jams. Een leuke manier om de streek te proeven."

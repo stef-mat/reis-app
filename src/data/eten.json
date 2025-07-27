@@ -1,7 +1,7 @@
 [
   {
-    "categorie": "Leuke horeca (lunch/ijs/pannenkoeken)",
-    "naam": "Paviljoen De Leyen (aanrader)",
+    "categorie": "Horeca",
+    "naam": "Paviljoen De Leyen",
     "adres": "De Leien, Rottevalle (bij strandparking)",
     "gps_coordinaten": "53.137 N, 6.108 E",
     "beschrijving": "Gezellig paviljoen aan het meer ‘De Leien’ met groot terras, zandstrand en speeltuin. Ze serveren biologische streekproducten (broodjes, gebak) en er zijn kano’s, waterfietsjes en picknicktafelsshereypaul.com.",
@@ -13,7 +13,7 @@
     "aanraders": "Kinderen kunnen spelen in het zand en zwemmen terwijl ouders genieten van koffie en lokaal gebak; huur een kano of pedalboat."
   },
   {
-    "categorie": "Leuke horeca (lunch/ijs/pannenkoeken)",
+    "categorie": "Horeca",
     "naam": "Boerderij De Omleiding",
     "adres": "Bûtefjild 24, 9269 TV Feanwâlden",
     "gps_coordinaten": "53.248 N, 5.977 E",
@@ -26,7 +26,7 @@
     "aanraders": "Geniet van lokale taart, soep of pannenkoeken, drink biologische limonade, ga varen of bak brood boven het vuur."
   },
   {
-    "categorie": "Leuke horeca (lunch/ijs/pannenkoeken)",
+    "categorie": "Horeca",
     "naam": "Koetshuis De Slotplaats",
     "adres": "Foarwurkerwei 3, 9243 JZ Bakkeveen",
     "gps_coordinaten": "53.093 N, 6.255 E",
@@ -39,8 +39,8 @@
     "aanraders": "Probeer huisgemaakt gebak of tosti’s met lokale kaas; kinderen kunnen spelen in de tuin terwijl ouders genieten van koffie."
   },
   {
-    "categorie": "Leuk restaurant (avondeten)",
-    "naam": "Restaurant De Slotplaats (aanrader)",
+    "categorie": "Restaurant",
+    "naam": "Restaurant De Slotplaats",
     "adres": "Foarwurkerwei 3, 9243 JZ Bakkeveen",
     "gps_coordinaten": "53.093 N, 6.255 E",
     "beschrijving": "Duurzame keuken op historisch landgoed. Chef kookt met seizoens‑ en streekproducten; er zijn kindermenu’s, kleurplaten en kinderstoelendeslotplaatsbakkeveen.nl.",
@@ -52,7 +52,7 @@
     "aanraders": "Probeer een driegangen‑menu met lokale groente en vlees; kinderen kunnen tussen gangen door naar de speelhoek."
   },
   {
-    "categorie": "Leuk restaurant (avondeten)",
+    "categorie": "Restaurant",
     "naam": "Genieterij Aldeboarn",
     "adres": "Achterom 1, 8495 JE Aldeboarn",
     "gps_coordinaten": "53.048 N, 5.933 E",
@@ -65,8 +65,8 @@
     "aanraders": "Dineer aan lange tafels met uitzicht op het water, proef Noord‑Nederlandse kazen, dry‑aged vlees en huisgemaakte paté; vraag naar een picknickmand voor onderweggenieterij-aldeboarn.nl."
   },
   {
-    "categorie": "Leuk restaurant (avondeten)",
-    "naam": "Boerderij De Omleiding (avond)",
+    "categorie": "Restaurant",
+    "naam": "Boerderij De Omleiding",
     "adres": "Bûtefjild 24, 9269 TV Feanwâlden",
     "gps_coordinaten": "53.248 N, 5.977 E",
     "beschrijving": "Naast lunches worden er in het hoogseizoen ook diners gekookt op kampvuur of pizza‑oven; picknick aan de waterkant of barbecue op aanvraagkidsproof.nl.",
@@ -79,13 +79,13 @@
   },
   {
     "categorie": "Lokale retail",
-    "naam": "Bakkerij van der Molen (aanrader)",
+    "naam": "Bakkerij van der Molen",
     "adres": "Weverswal 3‑B, 9243 JL Bakkeveen",
     "gps_coordinaten": "53.100 N, 6.256 E",
     "beschrijving": "Ambachtelijke bakker met dagelijks vers brood, banket en lokaal gebak. Ze verkopen ook streekproducten. Openingstijden: di‑vr 8:30‑12:15 & 13:15‑18:00, za 8:30‑16:00, ma/zo geslotentelefoonboek.nl.",
     "prijsindicatie": "brood vanaf €2, gebak €1,50‑3",
     "openingstijden": "di‑vr 8:30‑12:15 & 13:15‑18 u; za 8:30‑16 utelefoonboek.nl",
-    "website": "–",
+    "website": "",
     "reistijd_auto": "±3 min",
     "reistijd_fiets": "±5 min",
     "aanraders": "Probeer suikerbrood, Friese oranjekoek of eigen gebakken brood; neem voor onderweg een picknickpakket mee."
@@ -118,7 +118,7 @@
   },
   {
     "categorie": "Lokale brouwerij",
-    "naam": "Skûtsjebier (Wijnjewoude)(aanrader)",
+    "naam": "Skûtsjebier",
     "adres": "Duerswald 12, 9241 GX Wijnjewoude",
     "gps_coordinaten": "53.091 N, 6.227 E",
     "beschrijving": "Ambachtelijke brouwerij geïnspireerd op het Friese skûtsjesilen. Ze brouwen bieren zoals Skipper Tripel en Fokkenist en leveren aan lokale winkels en horecaskutsjebier.nl. Bezoekers kunnen flessen kopen en proeven bij Landwinkel De Scheperij (naast de boerderij).",
@@ -131,7 +131,7 @@
   },
   {
     "categorie": "Lokale brouwerij",
-    "naam": "Brouwerij Maallust (Veenhuizen)",
+    "naam": "Brouwerij Maallust",
     "adres": "Hoofdweg 140, 9341 PG Veenhuizen",
     "gps_coordinaten": "53.030 N, 6.407 E",
     "beschrijving": "Brouwerij gevestigd in een oude graanmaalderij van de voormalige kolonie Veenhuizen. Sinds 2011 wordt hier bier gebrouwen in koperen ketels; de brouwerij maakt deel uit van de historische maatschappij van Weldadigheidmaallust.nl.",
@@ -150,13 +150,13 @@
     "beschrijving": "Boerderijwinkel met zuivel, vlees en streekproducten. Verkoopt ook Skûtsjebier. Bij de boerderij is een terras en speelweide; ouders kunnen bier proeven terwijl kinderen geiten aaien (info via Skûtsjebier‑website).",
     "prijsindicatie": "zuivel €1‑3; bier €2,50; proeverij €5",
     "openingstijden": "di‑za 10‑17 u",
-    "website": "–",
+    "website": "",
     "reistijd_auto": "±10 min",
     "reistijd_fiets": "±20 min",
     "aanraders": "Proef kaas en yoghurt, koop bier en worst, laat de kinderen de koeien en lammetjes aaien."
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "Pannenkoeken- en Eethuis De Bakkeveense Duinen",
     "adres": "Mjumster Wei 15, Bakkeveen",
     "gps_coordinaten": "53.0877, 6.2681",
@@ -169,7 +169,7 @@
     "aanraders": "De kinderpannenkoeken die ze zelf mogen versieren zijn een hit. Voor de ouders zijn er ook hartige pannenkoeken en andere gerechten."
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "Theeschenkerij De Slotplaats",
     "adres": "Foarwurker Wei 3, Bakkeveen",
     "gps_coordinaten": "53.0842, 6.2533",
@@ -182,20 +182,20 @@
     "aanraders": "De appeltaart is beroemd in de regio. Voor de lunch zijn de biologische broodjes een aanrader."
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "IJssalon & Snackbar De Papagaai",
     "adres": "Torenlaan 1A, Bakkeveen",
     "gps_coordinaten": "53.0854, 6.2486",
     "beschrijving": "Midden in het centrum gelegen, de perfecte stop voor een ijsje na een dagje uit. Ze hebben een ruime keuze aan smaken en een terras.",
     "prijsindicatie": "Bolletje ijs vanaf €1,50.",
     "openingstijden": "Dagelijks geopend in de zomer.",
-    "website": "Geen website (te vinden in centrum).",
+    "website": "Geenwebsite(tevindenincentrum).",
     "reistijd_auto": "2 min",
     "reistijd_fiets": "6 min",
     "aanraders": "Naast de klassiekers hebben ze vaak wisselende, bijzondere smaken. Probeer een lokaal geïnspireerde smaak als die er is."
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "De Pyramide",
     "adres": "Weinterper Scans 1, Bakkeveen",
     "gps_coordinaten": "53.0955, 6.2505",
@@ -208,7 +208,7 @@
     "aanraders": "De kinderpizza's vallen altijd in de smaak. Ouders kunnen genieten van een uitgebreide grill-schotel."
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "Eetcafé De Vrolijke Keizer",
     "adres": "Brink 10, Bakkeveen",
     "gps_coordinaten": "53.0852, 6.2490",
@@ -221,7 +221,7 @@
     "aanraders": "De saté of een van de burgers zijn populair. Voor de kinderen zijn er vaak frietjes met een snack."
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "Pizzeria & Steakhouse De Kromme Knilles",
     "adres": "Sud 137, Drachten",
     "gps_coordinaten": "53.1042, 6.0964",
@@ -241,7 +241,7 @@
     "beschrijving": "Een ambachtelijke bakker in het centrum. Hier haal je vers brood, broodjes en typisch Fries gebak zoals oranjekoek en suikerbrood. Beste keuze voor de dagelijkse boodschappen en om de lokale specialiteiten te proeven. De geur van vers brood alleen al is een bezoek waard.",
     "prijsindicatie": "Brood vanaf €2,50.",
     "openingstijden": "Maandag t/m zaterdag geopend.",
-    "website": "Geen website.",
+    "website": "Geenwebsite.",
     "reistijd_auto": "2 min",
     "reistijd_fiets": "6 min",
     "aanraders": "Probeer absoluut het Friese suikerbrood ('sûkerbôle') en een stuk oranjekoek."
@@ -280,7 +280,7 @@
     "beschrijving": "Een kleinschalige, lokale brouwerij met een passie voor speciaalbier. Ze hebben vaak een proeflokaaltje of terras waar je de bieren kunt proeven. Beste keuze vanwege de zeer korte afstand en het lokale karakter. Een leuke ontdekking voor de ouders.",
     "prijsindicatie": "Speciaalbier vanaf €4,00.",
     "openingstijden": "Beperkte openingstijden, vaak in het weekend. Check Facebook-pagina.",
-    "website": "Facebook-pagina Koningshert",
+    "website": "Facebook-paginaKoningshert",
     "reistijd_auto": "3 min",
     "reistijd_fiets": "9 min",
     "aanraders": "Informeer of het proeflokaal geopend is. Vaak kun je er ook bier kopen om mee te nemen naar het vakantiehuis. Probeer hun IPA of een seizoensbier."
@@ -312,7 +312,7 @@
     "aanraders": "N.v.t."
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "Theehuis De Slotplaats",
     "adres": "Slotleane 1, 9243 JH Bakkeveen",
     "gps_coordinaten": "53.0827, 6.1289",
@@ -325,7 +325,7 @@
     "aanraders": "Huisgemaakte appeltaart, kinderpannenkoek, verse smoothies"
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "IJssalon La Frisia",
     "adres": "Handwerkerszijde 61, 9203 LZ Drachten",
     "gps_coordinaten": "53.1067, 6.1042",
@@ -338,7 +338,7 @@
     "aanraders": "Probeer het Friese Suikerbroodijs, kinderbeker met verrassing"
   },
   {
-    "categorie": "Leuke horeca",
+    "categorie": "Horeca",
     "naam": "Pannenkoekenhuis Bakkeveen",
     "adres": "Foarwurkerwei 5, 9243 JZ Bakkeveen",
     "gps_coordinaten": "53.0789, 6.1356",
@@ -351,7 +351,7 @@
     "aanraders": "Kinderpannenkoek Piraat, Bosbessenpannenkoek, huisgemaakte stroop"
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "James Bistro & Bar",
     "adres": "Burgemeester Wuiteweg 41, 9203 KE Drachten",
     "gps_coordinaten": "53.1042, 6.0892",
@@ -364,7 +364,7 @@
     "aanraders": "Dry aged burger, kindermenu met friet & snack, huisgemaakte limonade"
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "De Beren Drachten",
     "adres": "Zuidkade 2, 9203 CW Drachten",
     "gps_coordinaten": "53.1025, 6.0947",
@@ -377,7 +377,7 @@
     "aanraders": "Beren Burger, kindermenu's, spare ribs"
   },
   {
-    "categorie": "Leuk restaurant",
+    "categorie": "Restaurant",
     "naam": "Omnia Wereldkeuken",
     "adres": "Klokhuisplein 4, 9203 ZD Drachten",
     "gps_coordinaten": "53.1019, 6.0903",
@@ -397,7 +397,7 @@
     "beschrijving": "BESTE KEUZE: Authentieke dorpsbakker met ambachtelijk brood, Friese specialiteiten als suikerbrood en oranjekoek. Vers gebak en koekjes die kinderen kunnen versieren.",
     "prijsindicatie": "€2-8 per product",
     "openingstijden": "Ma-za 7:00-17:00",
-    "website": "Geen website",
+    "website": "Geenwebsite",
     "reistijd_auto": "4 min",
     "reistijd_fiets": "12 min",
     "aanraders": "Friese suikerbrood, verse krentenbollen, kinderkoekjes"

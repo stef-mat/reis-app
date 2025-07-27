@@ -3,8 +3,10 @@ import { ArrowRight } from 'lucide-react';
 import doenData from '../data/doen.json';
 import etenData from '../data/eten.json';
 import { APP_CONFIG } from '../config';
+import { useFavorites } from '../hooks/useFavorites';
 
 const LandingPage = ({ setPageState }) => {
+    const { favorites, favoriteLocations } = useFavorites();
 
     const handleDoenClick = () => {
         const doenCategories = [...new Set(doenData.map(item => item.categorie))];
@@ -22,6 +24,14 @@ const LandingPage = ({ setPageState }) => {
         });
     };
 
+    const handleFavorietenClick = () => {
+        setPageState({
+            page: 'locations',
+            filters: [], // Geen category filter
+            showFavorites: true // Extra parameter om direct favorieten te tonen
+        });
+    };
+
     return (
         <div className="min-h-screen bg-amber-50">
             <div className="container mx-auto px-4 py-16">
@@ -35,7 +45,7 @@ const LandingPage = ({ setPageState }) => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div 
                         onClick={handleDoenClick}
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
@@ -70,6 +80,33 @@ const LandingPage = ({ setPageState }) => {
                         </div>
                     </div>
 
+                    <div 
+                        onClick={handleFavorietenClick}
+                        className={`group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer ${favorites.size === 0 ? 'opacity-75' : ''}`}
+                    >
+                        <div className="text-4xl mb-3 relative">
+                            ❤️
+                            {favorites.size > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+                                    {favorites.size}
+                                </span>
+                            )}
+                        </div>
+                        <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                            Mijn Favorieten
+                        </h3>
+                        <p className="text-slate-600 mb-4">
+                            {favorites.size === 0 
+                                ? "Nog geen favorieten opgeslagen. Klik op een hartje om te beginnen!"
+                                : `Bekijk je ${favorites.size} opgeslagen ${favorites.size === 1 ? 'favoriet' : 'favorieten'}.`
+                            }
+                        </p>
+                        <div className="flex items-center text-amber-800 font-semibold group-hover:text-rose-600">
+                            <span>{favorites.size === 0 ? 'Start met favorieteren' : 'Bekijk favorieten'}</span>
+                            <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                        </div>
+                    </div>
+
                     <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-not-allowed opacity-70">
                         <div className="text-4xl mb-3">☀️</div>
                         <h3 className="text-2xl font-bold text-amber-900 mb-2">
@@ -84,6 +121,26 @@ const LandingPage = ({ setPageState }) => {
                         </div>
                     </div>
                 </div>
+
+                {/* Optionele snelle preview van favorieten indien aanwezig */}
+                {favorites.size > 0 && (
+                    <div className="mt-16">
+                        <h2 className="text-3xl font-bold text-amber-900 text-center mb-8">
+                            Je laatste favorieten
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                            {favoriteLocations.slice(0, 3).map((location) => (
+                                <div key={location.naam} className="bg-white/80 p-4 rounded-xl shadow-md">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="text-rose-500">❤️</span>
+                                        <h4 className="font-semibold text-amber-900 truncate">{location.naam}</h4>
+                                    </div>
+                                    <p className="text-sm text-slate-600 line-clamp-2">{location.beschrijving}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

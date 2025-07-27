@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import SearchAndFilter from '../components/SearchAndFilter';
@@ -9,11 +9,11 @@ import { useFilteredLocations } from '../hooks/useFilteredLocations';
 import { useHiddenLocations } from '../hooks/useHiddenLocations';
 import { locaties } from '../data/index';
 
-const LocationsPage = ({ setPageState, initialFilters }) => {
+const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategories, setSelectedCategories] = useState(initialFilters || []);
     const [selectedLocation, setSelectedLocation] = useState(null);
-    const [activeView, setActiveView] = useState('all');
+    const [activeView, setActiveView] = useState(showFavorites ? 'favorites' : 'all');
 
     const { favorites, favoriteLocations, toggleFavorite } = useFavorites();
     const { hidden, hideLocation, restoreLocation } = useHiddenLocations();
@@ -28,6 +28,13 @@ const LocationsPage = ({ setPageState, initialFilters }) => {
         ? locationsFiltered
         : favoritesFiltered;
 
+    // Effect om direct naar favorieten te gaan als showFavorites parameter is meegegeven
+    useEffect(() => {
+        if (showFavorites) {
+            setActiveView('favorites');
+        }
+    }, [showFavorites]);
+
     const handleCategoryChange = (category) => {
         setActiveView('all');
         if (category === 'Alle') {
@@ -39,18 +46,18 @@ const LocationsPage = ({ setPageState, initialFilters }) => {
 
     const handleShowFavorites = () => setActiveView('favorites');
 
-const handleRestoreHidden = () => {
-    hidden.forEach(name => restoreLocation(name));
-};
+    const handleRestoreHidden = () => {
+        hidden.forEach(name => restoreLocation(name));
+    };
 
-const uniqueCategories = useMemo(() => {
-    if (initialFilters && initialFilters.length > 0) {
-        return [...new Set(initialFilters)];
-    }
-    return [...new Set(locaties.map(loc => loc.categorie))];
-}, [initialFilters]);
+    const uniqueCategories = useMemo(() => {
+        if (initialFilters && initialFilters.length > 0) {
+            return [...new Set(initialFilters)];
+        }
+        return [...new Set(locaties.map(loc => loc.categorie))];
+    }, [initialFilters]);
 
-const allCategories = ['Alle', ...uniqueCategories];
+    const allCategories = ['Alle', ...uniqueCategories];
 
     return (
         <div className="min-h-screen bg-amber-100/50">
@@ -62,8 +69,11 @@ const allCategories = ['Alle', ...uniqueCategories];
             </div>
             <div className="container mx-auto p-4 md:p-8">
                 <PageHeader
-                    title="Wat gaan we doen?"
-                    subtitle={`Ontdek ${locaties.length} onvergetelijke familie-uitjes!`}
+                    title={activeView === 'favorites' ? "Mijn Favorieten" : "Wat gaan we doen?"}
+                    subtitle={activeView === 'favorites' 
+                        ? `${favorites.size} ${favorites.size === 1 ? 'favoriet' : 'favorieten'} opgeslagen` 
+                        : `Ontdek ${locaties.length} onvergetelijke familie-uitjes!`
+                    }
                 >
                     <SearchAndFilter
                         searchTerm={searchTerm}
@@ -100,12 +110,20 @@ const allCategories = ['Alle', ...uniqueCategories];
                                 : "Oeps, niets gevonden!"
                             }
                         </h3>
-                        <p className="text-slate-600">
+                        <p className="text-slate-600 mb-4">
                             {activeView === 'favorites'
                                 ? "Klik op een hartje om een uitje op te slaan!"
                                 : "Probeer een andere zoekterm of een ander filter."
                             }
                         </p>
+                        {activeView === 'favorites' && (
+                            <button 
+                                onClick={() => setActiveView('all')}
+                                className="mt-4 px-6 py-3 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition-colors font-semibold"
+                            >
+                                Ontdek nieuwe uitjes
+                            </button>
+                        )}
                     </div>
                 )}
             </div>

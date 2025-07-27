@@ -84,6 +84,17 @@ const LocationModal = ({ location, onClose }) => {
                         <p className="text-slate-700 leading-relaxed">{location.beschrijving}</p>
                     </div>
 
+                    {/* Aanraders - alleen tonen als er content is */}
+                    {location.aanraders && location.aanraders !== "N.v.t." && (
+                        <div className="mb-6 bg-amber-50 p-4 rounded-xl border border-amber-200">
+                            <h3 className="font-bold text-amber-900 mb-2 flex items-center gap-2">
+                                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                                Aanraders
+                            </h3>
+                            <p className="text-amber-800 leading-relaxed">{location.aanraders}</p>
+                        </div>
+                    )}
+
                     {/* Info Grid - Prijs en Openingstijden */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                         <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-200">

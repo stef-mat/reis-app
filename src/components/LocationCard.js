@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Euro, Heart, MapPin, Clock, X } from 'lucide-react';
+import { Euro, Heart, Car, Bike, X } from 'lucide-react';
 import { getCategoryStyle } from '../data/utils';
 import { useFavorites } from '../hooks/useFavorites';
 import { useHiddenLocations } from '../hooks/useHiddenLocations';
@@ -93,18 +93,18 @@ const LocationCard = ({ location, onShowDetails }) => {
                     {truncatedDescription}
                 </p>
 
-                {/* Quick Info - alleen op grotere schermen */}
+                {/* Quick Info - Reistijden in plaats van locatie en openingstijden */}
                 <div className="hidden sm:flex items-center gap-4 mb-4 text-xs text-slate-500">
-                    {location.gps_coordinaten !== "Niet expliciet vermeld" && (
+                    {location.reistijd_auto && (
                         <div className="flex items-center gap-1">
-                            <MapPin className="w-3 h-3" />
-                            <span>Locatie bekend</span>
+                            <Car className="w-3 h-3" />
+                            <span>{location.reistijd_auto}</span>
                         </div>
                     )}
-                    {location.openingstijden !== "Niet gespecificeerd" && (
+                    {location.reistijd_fiets && (
                         <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            <span>Openingstijden</span>
+                            <Bike className="w-3 h-3" />
+                            <span>{location.reistijd_fiets}</span>
                         </div>
                     )}
                 </div>
