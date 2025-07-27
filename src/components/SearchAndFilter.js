@@ -11,7 +11,8 @@ const SearchAndFilter = ({
     onRestoreHidden,
     hasHidden,
     activeView,
-    favoritesCount
+    favoritesCount,
+    showFavoritesButton = true  // Deze regel toevoegen
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -100,41 +101,35 @@ const SearchAndFilter = ({
                     <div className="hidden sm:block w-px h-6 bg-slate-200 mx-2"></div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-wrap gap-2 justify-center mt-2 sm:mt-0">
-                        {/* Favorites Button */}
-                        <button
-                            onClick={onShowFavorites}
-                            className={`flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border-2 ${
-                                activeView === 'favorites'
-                                ? 'bg-rose-500 text-white border-rose-500 shadow-md transform scale-105'
-                                : 'bg-white text-rose-500 hover:bg-rose-50 hover:border-rose-300 border-rose-200 hover:scale-102'
-                            }`}
-                            aria-pressed={activeView === 'favorites'}
-                        >
-                            <Heart className={`w-3 h-3 sm:w-4 sm:h-4 ${activeView === 'favorites' ? 'fill-current' : ''}`} />
-                            <span className="hidden sm:inline">Mijn Favorieten</span>
-                            <span className="sm:hidden">Favorieten</span>
-                            {favoritesCount > 0 && (
-                                <span className="bg-rose-100 text-rose-600 text-xs font-bold rounded-full px-1.5 py-0.5 min-w-[1.25rem] text-center">
-                                    {favoritesCount}
-                                </span>
-                            )}
-                        </button>
-
-                        {/* Restore Hidden Button */}
-                        {hasHidden && (
-                            <button
-                                onClick={onRestoreHidden}
-                                className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-700 border-2 border-slate-200 hover:bg-slate-50 hover:scale-102 transition-all duration-200"
-                                title="Herstel alle verborgen locaties"
-                            >
-                                <RotateCcw className="w-3 h-3 sm:w-4 sm:h-4" />
-                                <span className="hidden sm:inline">Verborgen herstellen</span>
-                                <span className="sm:hidden">Herstel</span>
-                            </button>
-                        )}
-                    </div>
-                </div>
+<div className="flex flex-wrap gap-2 justify-center mt-2 sm:mt-0">
+    {/* Favorites Button - alleen tonen als showFavoritesButton true is */}
+    {showFavoritesButton && (
+        <button
+            onClick={onShowFavorites}
+            className={`flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border-2 ${
+                activeView === 'favorites'
+                ? 'bg-rose-500 text-white border-rose-500 shadow-md transform scale-105'
+                : 'bg-white text-rose-500 hover:bg-rose-50 hover:border-rose-300 border-rose-200 hover:scale-102'
+            }`}
+            aria-pressed={activeView === 'favorites'}
+        >
+            <Heart className={`w-3 h-3 sm:w-4 sm:h-4 ${activeView === 'favorites' ? 'fill-current' : ''}`} />
+            <span className="hidden sm:inline">Mijn Favorieten</span>
+            <span className="sm:hidden">Favorieten</span>
+            {favoritesCount > 0 && (
+                <span className="bg-rose-100 text-rose-600 text-xs font-bold rounded-full px-1.5 py-0.5 min-w-[1.25rem] text-center">
+                    {favoritesCount}
+                </span>
+            )}
+        </button>
+    )}
+    
+    {/* Restore Hidden Button blijft ongewijzigd */}
+    {hasHidden && (
+        <button>...</button>
+    )}
+</div>
+                </div>`
 
                 {/* Active Filters Indicator */}
                 {(searchTerm || activeView === 'favorites' || (selectedCategory && selectedCategory !== 'Alle')) && (

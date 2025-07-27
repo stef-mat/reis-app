@@ -11,13 +11,48 @@ import { locaties } from '../data/index';
 
 const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategories, setSelectedCategories] = useState(initialFilters || []);
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [activeView, setActiveView] = useState(showFavorites ? 'favorites' : 'all');
 
     const { favorites, favoriteLocations, toggleFavorite } = useFavorites();
     const { hidden, hideLocation, restoreLocation } = useHiddenLocations();
+    
+    const uniqueCategories = useMemo(() => {
+        // Filter duplicates uit locaties data
+        const uniqueLocations = locaties.filter((location, index, self) => 
+            index === self.findIndex(l => l.naam === location.naam)
+        );
+        
+        if (initialFilters && initialFilters.length > 0) {
+            return [...new Set(initialFilters)];
+        }
+        return [...new Set(uniqueLocations.map(loc => loc.categorie))];
+    }, [initialFilters]);
+
+    const allCategories = ['Alle', ...uniqueCategories];
+
+    // Initialiseer selectedCategories correct
+    useEffect(() => {
+        if (showFavorites) {
+            setActiveView('favorites');
+            setPageState(prevState => ({ ...prevState, showFavorites: false }));
+        } else if (initialFilters && initialFilters.length > 0) {
+            setSelectedCategories([...initialFilters]); // Force new array
+        } else {
+            setSelectedCategories([...uniqueCategories]); // Force new array
+        }
+    }, [showFavorites, initialFilters, uniqueCategories, setPageState]);
+
     const filteredByGroup = useFilteredLocations(searchTerm, selectedCategories);
+    
+    // Debug logging + cleanup
+    useEffect(() => {
+        console.log('selectedCategories changed:', selectedCategories);
+        console.log('filteredByGroup length:', filteredByGroup.length);
+        console.log('favorites.size:', favorites.size);
+        console.log('favorites contents:', [...favorites]);
+    }, [selectedCategories, filteredByGroup, favorites]);
 
     const locationsFiltered = filteredByGroup.filter(loc => !hidden.has(loc.naam));
     const favoritesFiltered = favoriteLocations
@@ -28,18 +63,15 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
         ? locationsFiltered
         : favoritesFiltered;
 
-    // Effect om direct naar favorieten te gaan als showFavorites parameter is meegegeven
-    useEffect(() => {
-        if (showFavorites) {
-            setActiveView('favorites');
-        }
-    }, [showFavorites]);
-
     const handleCategoryChange = (category) => {
+        console.log('Category clicked:', category); // Debug log
         setActiveView('all');
+        
         if (category === 'Alle') {
-            setSelectedCategories(uniqueCategories);
+            console.log('Setting all categories:', uniqueCategories); // Debug log
+            setSelectedCategories([...uniqueCategories]); // Force new array
         } else {
+            console.log('Setting single category:', [category]); // Debug log
             setSelectedCategories([category]);
         }
     };
@@ -49,15 +81,6 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
     const handleRestoreHidden = () => {
         hidden.forEach(name => restoreLocation(name));
     };
-
-    const uniqueCategories = useMemo(() => {
-        if (initialFilters && initialFilters.length > 0) {
-            return [...new Set(initialFilters)];
-        }
-        return [...new Set(locaties.map(loc => loc.categorie))];
-    }, [initialFilters]);
-
-    const allCategories = ['Alle', ...uniqueCategories];
 
     return (
         <div className="min-h-screen bg-amber-100/50">
@@ -79,20 +102,22 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
                         searchTerm={searchTerm}
                         onSearchChange={setSearchTerm}
                         categories={allCategories}
-                        selectedCategory={selectedCategories.length === 1 ? selectedCategories[0] : ''}
+                        selectedCategory={
+                            selectedCategories.length === uniqueCategories.length ? 'Alle' : 
+                            selectedCategories.length === 1 ? selectedCategories[0] : ''
+                        }
                         onCategoryChange={handleCategoryChange}
-                        onShowFavorites={handleShowFavorites}
                         onRestoreHidden={handleRestoreHidden}
                         hasHidden={hidden.size > 0}
                         activeView={activeView}
-                        favoritesCount={favorites.size}
+                        showFavoritesButton={false}
                     />
                 </PageHeader>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {locationsToShow.map((location) => (
+                    {locationsToShow.map((location, index) => (
                         <LocationCard
-                            key={location.naam}
+                            key={`${location.naam}-${index}`}
                             location={location}
                             onShowDetails={setSelectedLocation}
                         />
