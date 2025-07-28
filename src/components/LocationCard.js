@@ -93,18 +93,18 @@ const LocationCard = ({ location, onShowDetails }) => {
                     {truncatedDescription}
                 </p>
 
-                {/* Quick Info - Reistijden in plaats van locatie en openingstijden */}
-                <div className="hidden sm:flex items-center gap-4 mb-4 text-xs text-slate-500">
+                {/* Quick Info - Reistijden zichtbaar op alle schermformaten */}
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 text-xs text-slate-500">
                     {location.reistijd_auto && (
                         <div className="flex items-center gap-1">
-                            <Car className="w-3 h-3" />
-                            <span>{location.reistijd_auto}</span>
+                            <Car className="w-3 h-3 sm:w-3 sm:h-3" />
+                            <span className="text-xs sm:text-xs">{location.reistijd_auto}</span>
                         </div>
                     )}
                     {location.reistijd_fiets && (
                         <div className="flex items-center gap-1">
-                            <Bike className="w-3 h-3" />
-                            <span>{location.reistijd_fiets}</span>
+                            <Bike className="w-3 h-3 sm:w-3 sm:h-3" />
+                            <span className="text-xs sm:text-xs">{location.reistijd_fiets}</span>
                         </div>
                     )}
                 </div>

@@ -14,6 +14,10 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [activeView, setActiveView] = useState(showFavorites ? 'favorites' : 'all');
+    
+    // Nieuwe state voor tijd filters
+    const [maxCarTime, setMaxCarTime] = useState(30);
+    const [maxBikeTime, setMaxBikeTime] = useState(30);
 
     const { favorites, favoriteLocations, toggleFavorite } = useFavorites();
     const { hidden, hideLocation, restoreLocation } = useHiddenLocations();
@@ -44,20 +48,41 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
         }
     }, [showFavorites, initialFilters, uniqueCategories, setPageState]);
 
-    const filteredByGroup = useFilteredLocations(searchTerm, selectedCategories);
+    // Gebruik de geüpdatete hook met tijd parameters
+    const filteredByGroup = useFilteredLocations(
+        searchTerm, 
+        selectedCategories, 
+        maxCarTime, 
+        maxBikeTime
+    );
     
     // Debug logging + cleanup
     useEffect(() => {
         console.log('selectedCategories changed:', selectedCategories);
         console.log('filteredByGroup length:', filteredByGroup.length);
+        console.log('maxCarTime:', maxCarTime, 'maxBikeTime:', maxBikeTime);
         console.log('favorites.size:', favorites.size);
         console.log('favorites contents:', [...favorites]);
-    }, [selectedCategories, filteredByGroup, favorites]);
+    }, [selectedCategories, filteredByGroup, favorites, maxCarTime, maxBikeTime]);
 
     const locationsFiltered = filteredByGroup.filter(loc => !hidden.has(loc.naam));
+    
+    // Ook favorieten filteren op tijd als dat gewenst is
     const favoritesFiltered = favoriteLocations
         .filter(loc => loc.naam.toLowerCase().includes(searchTerm.toLowerCase()))
-        .filter(loc => !hidden.has(loc.naam));
+        .filter(loc => !hidden.has(loc.naam))
+        // Optioneel: ook favorieten filteren op tijd
+        .filter(loc => {
+            if (maxCarTime < 30) {
+                const carTimeMinutes = parseTimeToMinutes(loc.reistijd_auto);
+                if (carTimeMinutes > maxCarTime) return false;
+            }
+            if (maxBikeTime < 30) {
+                const bikeTimeMinutes = parseTimeToMinutes(loc.reistijd_fiets);
+                if (bikeTimeMinutes > maxBikeTime) return false;
+            }
+            return true;
+        });
 
     const locationsToShow = activeView === 'all'
         ? locationsFiltered
@@ -80,6 +105,24 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
 
     const handleRestoreHidden = () => {
         hidden.forEach(name => restoreLocation(name));
+    };
+
+    // Handler voor auto tijd wijziging
+    const handleCarTimeChange = (newTime) => {
+        setMaxCarTime(newTime);
+        // Reset naar 'all' view als we in favorites waren
+        if (activeView === 'favorites') {
+            setActiveView('all');
+        }
+    };
+
+    // Handler voor fiets tijd wijziging  
+    const handleBikeTimeChange = (newTime) => {
+        setMaxBikeTime(newTime);
+        // Reset naar 'all' view als we in favorites waren
+        if (activeView === 'favorites') {
+            setActiveView('all');
+        }
     };
 
     return (
@@ -111,6 +154,11 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
                         hasHidden={hidden.size > 0}
                         activeView={activeView}
                         showFavoritesButton={false}
+                        maxCarTime={maxCarTime}
+                        maxBikeTime={maxBikeTime}
+                        onCarTimeChange={handleCarTimeChange}
+                        onBikeTimeChange={handleBikeTimeChange}
+                        favoritesCount={favorites.size}
                     />
                 </PageHeader>
 
@@ -159,6 +207,17 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
             />
         </div>
     );
+};
+
+// Helper functie om tijd string naar minuten te converteren (hergebruikt van hook)
+const parseTimeToMinutes = (timeString) => {
+    if (!timeString || timeString === 'N.v.t.' || timeString === '>30 min') {
+        return 999; // Grote waarde voor onbekende/lange tijden
+    }
+    
+    // Extract cijfers uit strings zoals "±15 min", "3 min", "75 min", etc.
+    const match = timeString.match(/(\d+)/);
+    return match ? parseInt(match[1]) : 999;
 };
 
 export default LocationsPage;
