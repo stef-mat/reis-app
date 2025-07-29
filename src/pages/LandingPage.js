@@ -1,12 +1,17 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 import doenData from '../data/doen.json';
 import etenData from '../data/eten.json';
 import { APP_CONFIG } from '../config';
 import { useFavorites } from '../hooks/useFavorites';
+import { usePlanning } from '../hooks/usePlanning';
 
 const LandingPage = ({ setPageState }) => {
     const { favorites, favoriteLocations } = useFavorites();
+    const { getTotalPlannedCount, getPlannedDays } = usePlanning();
+
+    const totalPlannedCount = getTotalPlannedCount();
+    const plannedDaysCount = getPlannedDays().length;
 
     const handleDoenClick = () => {
         const doenCategories = [...new Set(doenData.map(item => item.categorie))];
@@ -29,6 +34,12 @@ const LandingPage = ({ setPageState }) => {
             page: 'locations',
             filters: [], // Geen category filter
             showFavorites: true // Extra parameter om direct favorieten te tonen
+        });
+    };
+
+    const handlePlanningClick = () => {
+        setPageState({
+            page: 'planning'
         });
     };
 
@@ -61,7 +72,8 @@ const LandingPage = ({ setPageState }) => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Eerste rij: Originele 3 knoppen */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <div 
                         onClick={handleDoenClick}
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
@@ -124,7 +136,67 @@ const LandingPage = ({ setPageState }) => {
                     </div>
                 </div>
 
+                {/* Tweede rij: Planning knop (full width of gecentreerd) */}
+                <div className="flex justify-center mb-8">
+                    <div 
+                        onClick={handlePlanningClick}
+                        className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer max-w-md w-full"
+                    >
+                        <div className="text-center">
+                            <div className="text-4xl mb-3 relative inline-block">
+                                📅
+                                {totalPlannedCount > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+                                        {totalPlannedCount}
+                                    </span>
+                                )}
+                            </div>
+                            <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                                Mijn Planning
+                            </h3>
+                            <p className="text-slate-600 mb-4">
+                                {totalPlannedCount === 0 
+                                    ? "Plan je favorieten in per dag en tijdslot voor de perfecte vakantie!"
+                                    : `${totalPlannedCount} activiteiten gepland over ${plannedDaysCount} ${plannedDaysCount === 1 ? 'dag' : 'dagen'}.`
+                                }
+                            </p>
+                            <div className="flex items-center justify-center text-amber-800 font-semibold group-hover:text-rose-600">
+                                <Calendar className="w-4 h-4 mr-2" />
+                                <span>{totalPlannedCount === 0 ? 'Start met plannen' : 'Bekijk planning'}</span>
+                                <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                {/* Optionele snelle preview van planning indien aanwezig */}
+                {totalPlannedCount > 0 && (
+                    <div className="mt-16">
+                        <h2 className="text-3xl font-bold text-amber-900 text-center mb-8">
+                            Komende planning
+                        </h2>
+                        <div className="bg-white/80 p-6 rounded-xl shadow-md max-w-2xl mx-auto">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-2">
+                                    <Calendar className="w-6 h-6 text-blue-600" />
+                                    <span className="font-semibold text-slate-800">
+                                        {totalPlannedCount} activiteiten gepland
+                                    </span>
+                                </div>
+                                <button 
+                                    onClick={handlePlanningClick}
+                                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                                >
+                                    Bekijk alles →
+                                </button>
+                            </div>
+                            <p className="text-slate-600 text-sm">
+                                Verspreid over {plannedDaysCount} {plannedDaysCount === 1 ? 'dag' : 'dagen'}. 
+                                Klik om je volledige planning te bekijken en aan te passen.
+                            </p>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

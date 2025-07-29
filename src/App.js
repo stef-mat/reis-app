@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import LandingPage from './pages/LandingPage';
 import LocationsPage from './pages/LocationsPage';
+import PlanningPage from './pages/PlanningPage';
 import { HiddenLocationsProvider } from './context/HiddenLocationsContext';
+import { PlanningProvider } from './context/PlanningContext';
 import { APP_CONFIG } from './config';
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
                         showFavorites={pageState.showFavorites}
                     />
                 );
+            case 'planning':
+                return <PlanningPage setPageState={setPageState} />;
             default: 
                 return <LandingPage setPageState={setPageState} />;
         }
@@ -35,10 +39,12 @@ const App = () => {
 
     return (
         <HiddenLocationsProvider>
-            <main style={{ fontFamily: "'Nunito', sans-serif" }}>
-                <GlobalStyles />
-                {renderPage()}
-            </main>
+            <PlanningProvider>
+                <main style={{ fontFamily: "'Nunito', sans-serif" }}>
+                    <GlobalStyles />
+                    {renderPage()}
+                </main>
+            </PlanningProvider>
         </HiddenLocationsProvider>
     );
 };
