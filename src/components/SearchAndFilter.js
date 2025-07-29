@@ -95,61 +95,6 @@ const SearchAndFilter = ({
                 )}
             </div>
 
-            {/* Tijd Filters - altijd zichtbaar */}
-            <div className="mb-4 space-y-4">
-                {/* Auto tijd filter */}
-                <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2 min-w-[120px]">
-                        <Car className="w-4 h-4 text-red-600" />
-                        <span className="text-sm font-medium text-slate-700">Max auto:</span>
-                    </div>
-                    <div className="flex-1 relative">
-                        <input
-                            type="range"
-                            min="0"
-                            max="30"
-                            value={maxCarTime}
-                            onChange={handleCarTimeChange}
-                            className="w-full h-2 bg-red-200 rounded-lg appearance-none slider-thumb:appearance-none slider-thumb:w-4 slider-thumb:h-4 slider-thumb:bg-red-600 slider-thumb:rounded-full slider-thumb:cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-400"
-                            style={{
-                                background: `linear-gradient(to right, #dc2626 0%, #dc2626 ${(maxCarTime/30)*100}%, #fecaca ${(maxCarTime/30)*100}%, #fecaca 100%)`
-                            }}
-                        />
-                        <div className="flex justify-between text-xs text-slate-500 mt-1">
-                            <span>0 min</span>
-                            <span className="font-medium text-red-600">{formatTimeDisplay(maxCarTime)}</span>
-                            <span>30+ min</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Fiets tijd filter */}
-                <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2 min-w-[120px]">
-                        <Bike className="w-4 h-4 text-green-600" />
-                        <span className="text-sm font-medium text-slate-700">Max fiets:</span>
-                    </div>
-                    <div className="flex-1 relative">
-                        <input
-                            type="range"
-                            min="0"
-                            max="30"
-                            value={maxBikeTime}
-                            onChange={handleBikeTimeChange}
-                            className="w-full h-2 bg-green-200 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-green-400"
-                            style={{
-                                background: `linear-gradient(to right, #16a34a 0%, #16a34a ${(maxBikeTime/30)*100}%, #bbf7d0 ${(maxBikeTime/30)*100}%, #bbf7d0 100%)`
-                            }}
-                        />
-                        <div className="flex justify-between text-xs text-slate-500 mt-1">
-                            <span>0 min</span>
-                            <span className="font-medium text-green-600">{formatTimeDisplay(maxBikeTime)}</span>
-                            <span>30+ min</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {/* Mobile Toggle voor filters */}
             <div className="sm:hidden mb-3">
                 <button
@@ -212,6 +157,61 @@ const SearchAndFilter = ({
                                 <span className="sm:hidden">Herstel</span>
                             </button>
                         )}
+                    </div>
+                </div>
+
+                {/* Tijd Filters - onder de categorieën */}
+                <div className="mt-4 space-y-4">
+                    {/* Auto tijd filter */}
+                    <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <Car className="w-4 h-4 text-red-600" />
+                            <span className="text-sm font-medium text-slate-700">Max auto:</span>
+                        </div>
+                        <div className="flex-1 relative">
+                            <input
+                                type="range"
+                                min="0"
+                                max="30"
+                                value={maxCarTime}
+                                onChange={handleCarTimeChange}
+                                className="w-full h-2 bg-red-200 rounded-lg appearance-none slider-thumb:appearance-none slider-thumb:w-4 slider-thumb:h-4 slider-thumb:bg-red-600 slider-thumb:rounded-full slider-thumb:cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-400"
+                                style={{
+                                    background: `linear-gradient(to right, #dc2626 0%, #dc2626 ${(maxCarTime/30)*100}%, #fecaca ${(maxCarTime/30)*100}%, #fecaca 100%)`
+                                }}
+                            />
+                            <div className="flex justify-between text-xs text-slate-500 mt-1">
+                                <span>0 min</span>
+                                <span className="font-medium text-red-600">{formatTimeDisplay(maxCarTime)}</span>
+                                <span>30+ min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Fiets tijd filter */}
+                    <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2 min-w-[120px]">
+                            <Bike className="w-4 h-4 text-green-600" />
+                            <span className="text-sm font-medium text-slate-700">Max fiets:</span>
+                        </div>
+                        <div className="flex-1 relative">
+                            <input
+                                type="range"
+                                min="0"
+                                max="30"
+                                value={maxBikeTime}
+                                onChange={handleBikeTimeChange}
+                                className="w-full h-2 bg-green-200 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-green-400"
+                                style={{
+                                    background: `linear-gradient(to right, #16a34a 0%, #16a34a ${(maxBikeTime/30)*100}%, #bbf7d0 ${(maxBikeTime/30)*100}%, #bbf7d0 100%)`
+                                }}
+                            />
+                            <div className="flex justify-between text-xs text-slate-500 mt-1">
+                                <span>0 min</span>
+                                <span className="font-medium text-green-600">{formatTimeDisplay(maxBikeTime)}</span>
+                                <span>30+ min</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

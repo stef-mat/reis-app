@@ -43,9 +43,25 @@ const LandingPage = ({ setPageState }) => {
                     <p className="text-xl text-slate-600 mt-4 max-w-2xl mx-auto">
                         Jullie persoonlijke gids voor de leukste avonturen rond {APP_CONFIG.city}.
                     </p>
+                    
+                    {/* Weer widget */}
+                    <div className="mt-8 flex justify-center">
+                        <div style={{ maxWidth: '500px', width: '100%' }}>
+                            <iframe 
+                                title="widget" 
+                                width="100%" 
+                                height="328px" 
+                                frameBorder="0" 
+                                scrolling="no" 
+                                loading="lazy" 
+                                src="https://www.weeronline.nl/widget/weather?id=4056910"
+                                className="rounded-xl shadow-lg">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div 
                         onClick={handleDoenClick}
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
@@ -106,41 +122,9 @@ const LandingPage = ({ setPageState }) => {
                             <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                         </div>
                     </div>
-
-                    <div className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-not-allowed opacity-70">
-                        <div className="text-4xl mb-3">☀️</div>
-                        <h3 className="text-2xl font-bold text-amber-900 mb-2">
-                            Weerbericht
-                        </h3>
-                        <p className="text-slate-600 mb-4">
-                            Plan je uitje perfect met het actuele weerbericht. Binnenkort beschikbaar!
-                        </p>
-                        <div className="flex items-center text-slate-500 font-semibold">
-                            <span>Bekijk weer</span>
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                        </div>
-                    </div>
                 </div>
 
-                {/* Optionele snelle preview van favorieten indien aanwezig */}
-                {favorites.size > 0 && (
-                    <div className="mt-16">
-                        <h2 className="text-3xl font-bold text-amber-900 text-center mb-8">
-                            Je laatste favorieten
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                            {favoriteLocations.slice(0, 3).map((location) => (
-                                <div key={location.naam} className="bg-white/80 p-4 rounded-xl shadow-md">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-rose-500">❤️</span>
-                                        <h4 className="font-semibold text-amber-900 truncate">{location.naam}</h4>
-                                    </div>
-                                    <p className="text-sm text-slate-600 line-clamp-2">{location.beschrijving}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
+
             </div>
         </div>
     );
