@@ -126,7 +126,7 @@ const LocationsPage = ({ setPageState, initialFilters, showFavorites }) => {
     };
 
     return (
-        <div className="min-h-screen fries-bg">
+        <div className="min-h-screen app-bg">
              <div className="fixed top-4 left-4 z-30">
                 <button onClick={() => setPageState({ page: 'landing' })} className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm text-slate-700 rounded-full shadow-lg hover:bg-white transition-colors">
                     <ArrowRight className="w-4 h-4 transform rotate-180" />

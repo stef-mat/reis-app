@@ -44,12 +44,12 @@ const LandingPage = ({ setPageState }) => {
     };
 
     return (
-        <div className="min-h-screen fries-bg">
+        <div className="min-h-screen app-bg">
             <div className="container mx-auto px-4 py-16">
                 <div className="text-center mb-16">
-                    <span className="text-xl text-red-700">Familievakantie</span>
-                    <h1 className="text-6xl md:text-8xl font-extrabold text-red-800" style={{ fontFamily: "'Comic Sans MS', 'cursive', 'sans-serif'" }}>
-                        Hallo {APP_CONFIG.region}! ❤️
+                    <span className="text-xl">Familievakantie</span>
+                    <h1 className="text-6xl md:text-8xl font-extrabold">
+                        Hallo {APP_CONFIG.region}!
                     </h1>
                     <p className="text-xl text-slate-600 mt-4 max-w-2xl mx-auto">
                         Jullie persoonlijke gids voor de leukste avonturen rond {APP_CONFIG.city}.
@@ -79,7 +79,7 @@ const LandingPage = ({ setPageState }) => {
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-4xl mb-3">🎡</div>
-                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold mb-2">
                             Wat is er te doen?
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -96,7 +96,7 @@ const LandingPage = ({ setPageState }) => {
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-4xl mb-3">🍔</div>
-                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold mb-2">
                             Eten & Drinken
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -120,7 +120,7 @@ const LandingPage = ({ setPageState }) => {
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold mb-2">
                             Mijn Favorieten
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -147,7 +147,7 @@ const LandingPage = ({ setPageState }) => {
                                     </span>
                                 )}
                             </div>
-                            <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
+                            <h3 className="text-2xl font-bold mb-2">
                                 Mijn Planning
                             </h3>
                             <p className="text-slate-600 mb-4">
@@ -168,7 +168,7 @@ const LandingPage = ({ setPageState }) => {
                 {/* Optionele snelle preview van planning indien aanwezig */}
                 {totalPlannedCount > 0 && (
                     <div className="mt-16">
-                        <h2 className="text-3xl font-bold text-red-700 text-center mb-8">
+                        <h2 className="text-3xl font-bold text-center mb-8">
                             Komende planning
                         </h2>
                         <div className="bg-white/80 p-6 rounded-xl shadow-md max-w-2xl mx-auto">
