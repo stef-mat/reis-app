@@ -83,7 +83,7 @@ const PlanningPage = ({ setPageState }) => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="min-h-screen app-bg">
             {/* Header */}
             <div className="bg-white/90 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-20">
                 <div className="container mx-auto px-4 py-4">

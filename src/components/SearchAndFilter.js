@@ -68,7 +68,7 @@ const SearchAndFilter = ({
     );
 
     return (
-        <div className="bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-2xl shadow-lg border border-slate-200 sticky top-4 z-20">
+        <div className="bg-white p-3 sm:p-4 rounded-2xl shadow-lg border border-slate-200 sticky top-4 z-20">
             {/* Search Bar */}
             <div className="relative mb-4">
                 <label htmlFor="location-search" className="sr-only">
