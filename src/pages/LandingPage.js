@@ -47,9 +47,9 @@ const LandingPage = ({ setPageState }) => {
         <div className="min-h-screen fries-bg">
             <div className="container mx-auto px-4 py-16">
                 <div className="text-center mb-16">
-                    <span className="text-xl text-amber-800">Familievakantie</span>
-                    <h1 className="text-6xl md:text-8xl font-extrabold text-amber-900" style={{ fontFamily: "'Comic Sans MS', 'cursive', 'sans-serif'" }}>
-                        Hallo {APP_CONFIG.region}!
+                    <span className="text-xl text-red-700">Familievakantie</span>
+                    <h1 className="text-6xl md:text-8xl font-extrabold text-red-800" style={{ fontFamily: "'Comic Sans MS', 'cursive', 'sans-serif'" }}>
+                        Hallo {APP_CONFIG.region}! ❤️
                     </h1>
                     <p className="text-xl text-slate-600 mt-4 max-w-2xl mx-auto">
                         Jullie persoonlijke gids voor de leukste avonturen rond {APP_CONFIG.city}.
@@ -72,14 +72,14 @@ const LandingPage = ({ setPageState }) => {
                     </div>
                 </div>
 
-                {/* Eerste rij: Originele 3 knoppen */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                {/* Hoofdknoppen */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     <div 
                         onClick={handleDoenClick}
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-4xl mb-3">🎡</div>
-                        <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
                             Wat is er te doen?
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -96,7 +96,7 @@ const LandingPage = ({ setPageState }) => {
                         className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-4xl mb-3">🍔</div>
-                        <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
                             Eten & Drinken
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -108,9 +108,9 @@ const LandingPage = ({ setPageState }) => {
                         </div>
                     </div>
 
-                    <div 
+                    <div
                         onClick={handleFavorietenClick}
-                        className={`group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer ${favorites.size === 0 ? 'opacity-75' : ''}`}
+                        className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-4xl mb-3 relative">
                             ❤️
@@ -120,7 +120,7 @@ const LandingPage = ({ setPageState }) => {
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
                             Mijn Favorieten
                         </h3>
                         <p className="text-slate-600 mb-4">
@@ -134,13 +134,9 @@ const LandingPage = ({ setPageState }) => {
                             <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                         </div>
                     </div>
-                </div>
-
-                {/* Tweede rij: Planning knop (full width of gecentreerd) */}
-                <div className="flex justify-center mb-8">
-                    <div 
+                    <div
                         onClick={handlePlanningClick}
-                        className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer max-w-md w-full"
+                        className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                     >
                         <div className="text-center">
                             <div className="text-4xl mb-3 relative inline-block">
@@ -151,7 +147,7 @@ const LandingPage = ({ setPageState }) => {
                                     </span>
                                 )}
                             </div>
-                            <h3 className="text-2xl font-bold text-amber-900 mb-2 group-hover:text-rose-600 transition-colors">
+                            <h3 className="text-2xl font-bold text-red-700 mb-2 group-hover:text-rose-600 transition-colors">
                                 Mijn Planning
                             </h3>
                             <p className="text-slate-600 mb-4">
@@ -172,7 +168,7 @@ const LandingPage = ({ setPageState }) => {
                 {/* Optionele snelle preview van planning indien aanwezig */}
                 {totalPlannedCount > 0 && (
                     <div className="mt-16">
-                        <h2 className="text-3xl font-bold text-amber-900 text-center mb-8">
+                        <h2 className="text-3xl font-bold text-red-700 text-center mb-8">
                             Komende planning
                         </h2>
                         <div className="bg-white/80 p-6 rounded-xl shadow-md max-w-2xl mx-auto">
