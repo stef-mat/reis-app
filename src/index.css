@@ -16,3 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Frisian theme background */
+.fries-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #ffffff 0,
+    #ffffff 40px,
+    #005bbb 40px,
+    #005bbb 80px
+  );
+}

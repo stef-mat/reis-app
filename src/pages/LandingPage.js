@@ -44,7 +44,7 @@ const LandingPage = ({ setPageState }) => {
     };
 
     return (
-        <div className="min-h-screen bg-amber-50">
+        <div className="min-h-screen fries-bg">
             <div className="container mx-auto px-4 py-16">
                 <div className="text-center mb-16">
                     <span className="text-xl text-amber-800">Familievakantie</span>
