@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LandingPage from './pages/LandingPage';
 import LocationsPage from './pages/LocationsPage';
 import PlanningPage from './pages/PlanningPage';
+import AnimatiePage from './pages/AnimatiePage';
 import { HiddenLocationsProvider } from './context/HiddenLocationsContext';
 import { PlanningProvider } from './context/PlanningContext';
 import { APP_CONFIG } from './config';
@@ -23,6 +24,8 @@ const App = () => {
                 );
             case 'planning':
                 return <PlanningPage setPageState={setPageState} />;
+            case 'animatie':
+                return <AnimatiePage setPageState={setPageState} />;
             default: 
                 return <LandingPage setPageState={setPageState} />;
         }

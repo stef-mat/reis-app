@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
-import { X, Plus, Search, Heart, Sunrise, Sun, Moon, Calendar, MapPin, Euro, Car, Bike } from 'lucide-react';
+import { X, Plus, Search, Heart, Sunrise, Sun, Moon, Calendar, MapPin, Euro, Car, Bike, Star } from 'lucide-react';
 import { useFavorites } from '../hooks/useFavorites';
 import { usePlanning } from '../hooks/usePlanning';
 import { getCategoryStyle } from '../data/utils';
-import { locaties } from '../data/index';
+import { locaties, animatieData } from '../data/index';
 
 const AddToPlanModal = ({ date, timeSlot, onClose }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedTab, setSelectedTab] = useState('favorites'); // 'favorites' of 'all'
+    const [selectedTab, setSelectedTab] = useState('favorites'); // 'favorites', 'all', of 'animatie'
     
     const { favoriteLocations } = useFavorites();
     const { addToDay, isLocationPlanned } = usePlanning();
@@ -23,7 +23,14 @@ const AddToPlanModal = ({ date, timeSlot, onClose }) => {
 
     // Filter locaties op basis van tab en zoekterm
     const filteredLocations = useMemo(() => {
-        const sourceLocations = selectedTab === 'favorites' ? favoriteLocations : locaties;
+        let sourceLocations;
+        if (selectedTab === 'favorites') {
+            sourceLocations = favoriteLocations;
+        } else if (selectedTab === 'animatie') {
+            sourceLocations = animatieData;
+        } else {
+            sourceLocations = locaties;
+        }
         
         if (!searchTerm.trim()) return sourceLocations;
         
@@ -103,30 +110,45 @@ const AddToPlanModal = ({ date, timeSlot, onClose }) => {
                 <div className="flex bg-slate-50 border-b border-slate-200">
                     <button
                         onClick={() => setSelectedTab('favorites')}
-                        className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 font-semibold transition-colors ${
+                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-semibold transition-colors ${
                             selectedTab === 'favorites'
                                 ? 'bg-white text-rose-600 border-b-2 border-rose-600'
                                 : 'text-slate-600 hover:text-slate-800'
                         }`}
                     >
-                        <Heart className={`w-5 h-5 ${selectedTab === 'favorites' ? 'fill-current' : ''}`} />
-                        <span>Mijn Favorieten</span>
-                        <span className="bg-rose-100 text-rose-600 text-sm px-2 py-1 rounded-full">
+                        <Heart className={`w-4 h-4 ${selectedTab === 'favorites' ? 'fill-current' : ''}`} />
+                        <span className="hidden sm:inline">Favorieten</span>
+                        <span className="bg-rose-100 text-rose-600 text-xs px-2 py-1 rounded-full">
                             {favoriteLocations.length}
                         </span>
                     </button>
                     
                     <button
+                        onClick={() => setSelectedTab('animatie')}
+                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-semibold transition-colors ${
+                            selectedTab === 'animatie'
+                                ? 'bg-white text-purple-600 border-b-2 border-purple-600'
+                                : 'text-slate-600 hover:text-slate-800'
+                        }`}
+                    >
+                        <Star className="w-4 h-4" />
+                        <span className="hidden sm:inline">Animatie</span>
+                        <span className="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded-full">
+                            {animatieData.length}
+                        </span>
+                    </button>
+                    
+                    <button
                         onClick={() => setSelectedTab('all')}
-                        className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 font-semibold transition-colors ${
+                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 font-semibold transition-colors ${
                             selectedTab === 'all'
                                 ? 'bg-white text-blue-600 border-b-2 border-blue-600'
                                 : 'text-slate-600 hover:text-slate-800'
                         }`}
                     >
-                        <Calendar className="w-5 h-5" />
-                        <span>Alle Activiteiten</span>
-                        <span className="bg-blue-100 text-blue-600 text-sm px-2 py-1 rounded-full">
+                        <Calendar className="w-4 h-4" />
+                        <span className="hidden sm:inline">Alle</span>
+                        <span className="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded-full">
                             {locaties.length}
                         </span>
                     </button>
@@ -158,6 +180,13 @@ const AddToPlanModal = ({ date, timeSlot, onClose }) => {
                                                     <span className="flex items-center gap-1 px-2 py-1 bg-rose-100 text-rose-600 rounded-full text-xs font-medium">
                                                         <Heart className="w-3 h-3 fill-current" />
                                                         Favoriet
+                                                    </span>
+                                                )}
+                                                
+                                                {selectedTab === 'all' && location.categorie === 'Animatieprogramma' && (
+                                                    <span className="flex items-center gap-1 px-2 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-medium">
+                                                        <Star className="w-3 h-3" />
+                                                        Animatie
                                                     </span>
                                                 )}
                                                 
