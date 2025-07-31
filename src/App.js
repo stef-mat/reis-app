@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import LocationsPage from './pages/LocationsPage';
 import PlanningPage from './pages/PlanningPage';
 import AnimatiePage from './pages/AnimatiePage';
+import CompletedPage from './pages/CompletedPage';
 import { HiddenLocationsProvider } from './context/HiddenLocationsContext';
 import { PlanningProvider } from './context/PlanningContext';
 import { APP_CONFIG } from './config';
@@ -22,7 +23,9 @@ const App = () => {
                         showFavorites={pageState.showFavorites}
                     />
                 );
-            case 'planning':
+            case 'completed':
+    return <CompletedPage setPageState={setPageState} />;
+                case 'planning':
                 return <PlanningPage setPageState={setPageState} />;
             case 'animatie':
                 return <AnimatiePage setPageState={setPageState} />;
@@ -31,20 +34,10 @@ const App = () => {
         }
     };
 
-    const GlobalStyles = () => (
-        <style jsx global>{`
-          @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-          @keyframes slide-up { from { transform: translateY(20px); opacity: 0.8; } to { transform: translateY(0); opacity: 1; } }
-          .animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
-          .animate-slide-up { animation: slide-up 0.4s ease-out forwards; }
-        `}</style>
-    );
-
     return (
         <HiddenLocationsProvider>
             <PlanningProvider>
                 <main style={{ fontFamily: "'Nunito', sans-serif" }}>
-                    <GlobalStyles />
                     {renderPage()}
                 </main>
             </PlanningProvider>
